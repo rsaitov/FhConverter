@@ -45,12 +45,15 @@
             this.txtPage2Crooked = new System.Windows.Forms.RichTextBox();
             this.txtPage2Straight = new System.Windows.Forms.RichTextBox();
             this.btn7ByteConvert = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnHexToDecConvert = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabMain.SuspendLayout();
             this.tabPageDecToHex.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tabPage7ByteChange.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -95,11 +98,11 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.btnDecToHexConvert, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtPage1Dec, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.txtPage1Hex, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -113,9 +116,9 @@
             // 
             this.btnDecToHexConvert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDecToHexConvert.Location = new System.Drawing.Point(332, 23);
+            this.btnDecToHexConvert.Location = new System.Drawing.Point(3, 3);
             this.btnDecToHexConvert.Name = "btnDecToHexConvert";
-            this.btnDecToHexConvert.Size = new System.Drawing.Size(84, 23);
+            this.btnDecToHexConvert.Size = new System.Drawing.Size(78, 23);
             this.btnDecToHexConvert.TabIndex = 2;
             this.btnDecToHexConvert.Text = ">>";
             this.btnDecToHexConvert.UseVisualStyleBackColor = true;
@@ -234,6 +237,31 @@
             this.btn7ByteConvert.Text = ">>";
             this.btn7ByteConvert.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.btnDecToHexConvert, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnHexToDecConvert, 0, 1);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(332, 23);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(84, 100);
+            this.tableLayoutPanel4.TabIndex = 7;
+            // 
+            // btnHexToDecConvert
+            // 
+            this.btnHexToDecConvert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHexToDecConvert.Location = new System.Drawing.Point(3, 32);
+            this.btnHexToDecConvert.Name = "btnHexToDecConvert";
+            this.btnHexToDecConvert.Size = new System.Drawing.Size(78, 23);
+            this.btnHexToDecConvert.TabIndex = 3;
+            this.btnHexToDecConvert.Text = "<<";
+            this.btnHexToDecConvert.UseVisualStyleBackColor = true;
+            // 
             // FhConverterMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -251,6 +279,7 @@
             this.tabPage7ByteChange.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -273,5 +302,7 @@
         private System.Windows.Forms.RichTextBox txtPage2Crooked;
         private System.Windows.Forms.RichTextBox txtPage2Straight;
         private System.Windows.Forms.Button btn7ByteConvert;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Button btnHexToDecConvert;
     }
 }

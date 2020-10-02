@@ -18,6 +18,7 @@ namespace FhConverter
             InitializeComponent();
 
             btnDecToHexConvert.Click += new System.EventHandler(ConvertDecToHex);
+            btnHexToDecConvert.Click += new System.EventHandler(ConvertHexToDec);
             btn7ByteConvert.Click += new System.EventHandler(Convert7ByteCrookedToStraight);
         }
 
@@ -27,6 +28,14 @@ namespace FhConverter
             var decs = txtPage1Dec.Text.Split(new char[] { '\r', '\n' }).ToList();
             var hexs = converter.Convert(decs);
             txtPage1Hex.Text = String.Join("\r\n", hexs);
+        }
+
+        private void ConvertHexToDec(object sender, EventArgs e)
+        {
+            converter = new HexToDecConverter();
+            var decs = txtPage1Hex.Text.Split(new char[] { '\r', '\n' }).ToList();
+            var hexs = converter.Convert(decs);
+            txtPage1Dec.Text = String.Join("\r\n", hexs);
         }
 
         private void Convert7ByteCrookedToStraight(object sender, EventArgs e)
