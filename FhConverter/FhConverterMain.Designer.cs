@@ -33,11 +33,13 @@
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabPageDecToHex = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnDecToHexConvert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPage1Dec = new System.Windows.Forms.RichTextBox();
             this.txtPage1Hex = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnDecToHexConvert = new System.Windows.Forms.Button();
+            this.btnHexToDecConvert = new System.Windows.Forms.Button();
             this.tabPage7ByteChange = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,15 +47,22 @@
             this.txtPage2Crooked = new System.Windows.Forms.RichTextBox();
             this.txtPage2Straight = new System.Windows.Forms.RichTextBox();
             this.btn7ByteConvert = new System.Windows.Forms.Button();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnHexToDecConvert = new System.Windows.Forms.Button();
+            this.tabPagePhoneNormalizer = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtPage3PhonesAbnormal = new System.Windows.Forms.RichTextBox();
+            this.txtPage3PhonesNormal = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnPhoneNormalizerConvert = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabMain.SuspendLayout();
             this.tabPageDecToHex.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.tabPage7ByteChange.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
+            this.tabPagePhoneNormalizer.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -73,10 +82,11 @@
             // 
             this.tabMain.Controls.Add(this.tabPageDecToHex);
             this.tabMain.Controls.Add(this.tabPage7ByteChange);
+            this.tabMain.Controls.Add(this.tabPagePhoneNormalizer);
             this.tabMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabMain.Location = new System.Drawing.Point(3, 3);
             this.tabMain.Name = "tabMain";
-            this.tabMain.SelectedIndex = 0;
+            this.tabMain.SelectedIndex = 2;
             this.tabMain.Size = new System.Drawing.Size(763, 614);
             this.tabMain.TabIndex = 0;
             // 
@@ -111,17 +121,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(749, 580);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // btnDecToHexConvert
-            // 
-            this.btnDecToHexConvert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDecToHexConvert.Location = new System.Drawing.Point(3, 3);
-            this.btnDecToHexConvert.Name = "btnDecToHexConvert";
-            this.btnDecToHexConvert.Size = new System.Drawing.Size(78, 23);
-            this.btnDecToHexConvert.TabIndex = 2;
-            this.btnDecToHexConvert.Text = ">>";
-            this.btnDecToHexConvert.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -158,6 +157,42 @@
             this.txtPage1Hex.Size = new System.Drawing.Size(324, 554);
             this.txtPage1Hex.TabIndex = 6;
             this.txtPage1Hex.Text = "";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.btnDecToHexConvert, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnHexToDecConvert, 0, 1);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(332, 23);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(84, 100);
+            this.tableLayoutPanel4.TabIndex = 7;
+            // 
+            // btnDecToHexConvert
+            // 
+            this.btnDecToHexConvert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDecToHexConvert.Location = new System.Drawing.Point(3, 3);
+            this.btnDecToHexConvert.Name = "btnDecToHexConvert";
+            this.btnDecToHexConvert.Size = new System.Drawing.Size(78, 23);
+            this.btnDecToHexConvert.TabIndex = 2;
+            this.btnDecToHexConvert.Text = ">>";
+            this.btnDecToHexConvert.UseVisualStyleBackColor = true;
+            // 
+            // btnHexToDecConvert
+            // 
+            this.btnHexToDecConvert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHexToDecConvert.Location = new System.Drawing.Point(3, 32);
+            this.btnHexToDecConvert.Name = "btnHexToDecConvert";
+            this.btnHexToDecConvert.Size = new System.Drawing.Size(78, 23);
+            this.btnHexToDecConvert.TabIndex = 3;
+            this.btnHexToDecConvert.Text = "<<";
+            this.btnHexToDecConvert.UseVisualStyleBackColor = true;
             // 
             // tabPage7ByteChange
             // 
@@ -237,30 +272,83 @@
             this.btn7ByteConvert.Text = ">>";
             this.btn7ByteConvert.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel4
+            // tabPagePhoneNormalizer
             // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.btnDecToHexConvert, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btnHexToDecConvert, 0, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(332, 23);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(84, 100);
-            this.tableLayoutPanel4.TabIndex = 7;
+            this.tabPagePhoneNormalizer.Controls.Add(this.tableLayoutPanel5);
+            this.tabPagePhoneNormalizer.Location = new System.Drawing.Point(4, 24);
+            this.tabPagePhoneNormalizer.Name = "tabPagePhoneNormalizer";
+            this.tabPagePhoneNormalizer.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePhoneNormalizer.Size = new System.Drawing.Size(755, 586);
+            this.tabPagePhoneNormalizer.TabIndex = 2;
+            this.tabPagePhoneNormalizer.Text = "Phone Normalizer";
+            this.tabPagePhoneNormalizer.UseVisualStyleBackColor = true;
             // 
-            // btnHexToDecConvert
+            // tableLayoutPanel5
             // 
-            this.btnHexToDecConvert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.txtPage3PhonesAbnormal, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.txtPage3PhonesNormal, 2, 1);
+            this.tableLayoutPanel5.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label6, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnPhoneNormalizerConvert, 1, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(749, 580);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // txtPage3PhonesAbnormal
+            // 
+            this.txtPage3PhonesAbnormal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPage3PhonesAbnormal.Location = new System.Drawing.Point(3, 23);
+            this.txtPage3PhonesAbnormal.Name = "txtPage3PhonesAbnormal";
+            this.txtPage3PhonesAbnormal.Size = new System.Drawing.Size(323, 554);
+            this.txtPage3PhonesAbnormal.TabIndex = 0;
+            this.txtPage3PhonesAbnormal.Text = "";
+            // 
+            // txtPage3PhonesNormal
+            // 
+            this.txtPage3PhonesNormal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPage3PhonesNormal.Location = new System.Drawing.Point(422, 23);
+            this.txtPage3PhonesNormal.Name = "txtPage3PhonesNormal";
+            this.txtPage3PhonesNormal.Size = new System.Drawing.Size(324, 554);
+            this.txtPage3PhonesNormal.TabIndex = 1;
+            this.txtPage3PhonesNormal.Text = "";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 15);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Abnormal";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(422, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 15);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Normal";
+            // 
+            // btnPhoneNormalizerConvert
+            // 
+            this.btnPhoneNormalizerConvert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHexToDecConvert.Location = new System.Drawing.Point(3, 32);
-            this.btnHexToDecConvert.Name = "btnHexToDecConvert";
-            this.btnHexToDecConvert.Size = new System.Drawing.Size(78, 23);
-            this.btnHexToDecConvert.TabIndex = 3;
-            this.btnHexToDecConvert.Text = "<<";
-            this.btnHexToDecConvert.UseVisualStyleBackColor = true;
+            this.btnPhoneNormalizerConvert.Location = new System.Drawing.Point(332, 23);
+            this.btnPhoneNormalizerConvert.Name = "btnPhoneNormalizerConvert";
+            this.btnPhoneNormalizerConvert.Size = new System.Drawing.Size(84, 23);
+            this.btnPhoneNormalizerConvert.TabIndex = 4;
+            this.btnPhoneNormalizerConvert.Text = ">>";
+            this.btnPhoneNormalizerConvert.UseVisualStyleBackColor = true;
             // 
             // FhConverterMain
             // 
@@ -276,10 +364,13 @@
             this.tabPageDecToHex.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.tabPage7ByteChange.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tabPagePhoneNormalizer.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -304,5 +395,12 @@
         private System.Windows.Forms.Button btn7ByteConvert;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button btnHexToDecConvert;
+        private System.Windows.Forms.TabPage tabPagePhoneNormalizer;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.RichTextBox txtPage3PhonesAbnormal;
+        private System.Windows.Forms.RichTextBox txtPage3PhonesNormal;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnPhoneNormalizerConvert;
     }
 }

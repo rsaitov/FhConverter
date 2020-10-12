@@ -20,6 +20,7 @@ namespace FhConverter
             btnDecToHexConvert.Click += new System.EventHandler(ConvertDecToHex);
             btnHexToDecConvert.Click += new System.EventHandler(ConvertHexToDec);
             btn7ByteConvert.Click += new System.EventHandler(Convert7ByteCrookedToStraight);
+            btnPhoneNormalizerConvert.Click += new EventHandler(ConvertPhone);
         }
 
         private void ConvertDecToHex(object sender, EventArgs e)
@@ -44,6 +45,14 @@ namespace FhConverter
             var crooked = txtPage2Crooked.Text.Split(new char[] { '\r', '\n' }).ToList();
             var straight = converter.Convert(crooked);
             txtPage2Straight.Text = String.Join("\r\n", straight);
+        }
+
+        private void ConvertPhone(object sender, EventArgs e)
+        {
+            converter = new PhoneConverter();
+            var phonesAbnormal = txtPage3PhonesAbnormal.Text.Split(new char[] { '\r', '\n' }).ToList();
+            var phonesNormal = converter.Convert(phonesAbnormal);
+            txtPage3PhonesNormal.Text = String.Join("\r\n", phonesNormal);
         }
     }
 }
