@@ -11,7 +11,7 @@ namespace FhConverter.Model
 
         public Phone(string phone)
         {
-            phone = CleanPhone(phone);
+            phone = ReplaceBadSymbols(phone);
             
             switch (phone.Length)
             {
@@ -33,9 +33,9 @@ namespace FhConverter.Model
             }
         }
 
-        public string CleanPhone(string phone)
+        public string ReplaceBadSymbols(string phone)
         {
-            string[] replaceSymbols = { "+7", "+", "-", " ", "_" };
+            string[] replaceSymbols = { "+7", "+", "-", " ", "_", "(", ")" };
 
             var sb = new StringBuilder(phone);
             foreach(var symbol in replaceSymbols)
